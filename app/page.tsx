@@ -26,6 +26,7 @@ import {
   BadgeCheck,
   Target,
   Handshake,
+  Monitor,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -33,6 +34,14 @@ type ShowcaseImage = {
   title: string;
   image: string;
   alt: string;
+};
+
+type MobileShowcaseProject = {
+  key: string;
+  label: string;
+  title: string;
+  description: string;
+  images: ShowcaseImage[];
 };
 
 type Project = {
@@ -55,16 +64,49 @@ type SectionTitleProps = {
   description?: string;
 };
 
-const showcaseImages: ShowcaseImage[] = [
-  { title: 'Kkuljaem App Mobile Preview 1', image: '/1.png', alt: 'Kkuljaem mobile app preview 1' },
-  { title: 'Kkuljaem App Mobile Preview 2', image: '/2.png', alt: 'Kkuljaem mobile app preview 2' },
-  { title: 'Kkuljaem App Mobile Preview 3', image: '/3.png', alt: 'Kkuljaem mobile app preview 3' },
-  { title: 'Kkuljaem App Mobile Preview 4', image: '/4.png', alt: 'Kkuljaem mobile app preview 4' },
-  { title: 'Kkuljaem App Mobile Preview 5', image: '/5.png', alt: 'Kkuljaem mobile app preview 5' },
-  { title: 'Kkuljaem App Mobile Preview 6', image: '/6.png', alt: 'Kkuljaem mobile app preview 6' },
-  { title: 'Kkuljaem App Mobile Preview 7', image: '/7.png', alt: 'Kkuljaem mobile app preview 7' },
-  { title: 'Kkuljaem App Mobile Preview 8', image: '/8.png', alt: 'Kkuljaem mobile app preview 8' },
-  { title: 'Kkuljaem App Mobile Preview 9', image: '/9.png', alt: 'Kkuljaem mobile app preview 9' },
+type LivePreview = {
+  title: string;
+  url: string;
+  description: string;
+};
+
+type CompanyLogo = {
+  name: string;
+  image: string;
+};
+
+const mobileShowcaseProjects: MobileShowcaseProject[] = [
+  {
+    key: 'grab-health',
+    label: 'Grab Health',
+    title: 'Grab Health by Good Doctor',
+    description: 'Selected mobile interface showcase from the Grab Health by Good Doctor project.',
+    images: [
+      { title: 'Grab Health Preview 1', image: '/grab1.jpeg', alt: 'Grab Health mobile preview 1' },
+      { title: 'Grab Health Preview 2', image: '/grab2.jpeg', alt: 'Grab Health mobile preview 2' },
+      { title: 'Grab Health Preview 3', image: '/grab3.jpeg', alt: 'Grab Health mobile preview 3' },
+      { title: 'Grab Health Preview 4', image: '/grab4.jpeg', alt: 'Grab Health mobile preview 4' },
+      { title: 'Grab Health Preview 5', image: '/grab5.jpeg', alt: 'Grab Health mobile preview 5' },
+      { title: 'Grab Health Preview 6', image: '/grab6.jpeg', alt: 'Grab Health mobile preview 6' },
+    ],
+  },
+  {
+    key: 'kkuljaem',
+    label: 'Kkuljaem App',
+    title: 'Kkuljaem App Mobile',
+    description: 'Selected mobile interface showcase from the Kkuljaem App product.',
+    images: [
+      { title: 'Kkuljaem App Mobile Preview 1', image: '/1.png', alt: 'Kkuljaem mobile app preview 1' },
+      { title: 'Kkuljaem App Mobile Preview 2', image: '/2.png', alt: 'Kkuljaem mobile app preview 2' },
+      { title: 'Kkuljaem App Mobile Preview 3', image: '/3.png', alt: 'Kkuljaem mobile app preview 3' },
+      { title: 'Kkuljaem App Mobile Preview 4', image: '/4.png', alt: 'Kkuljaem mobile app preview 4' },
+      { title: 'Kkuljaem App Mobile Preview 5', image: '/5.png', alt: 'Kkuljaem mobile app preview 5' },
+      { title: 'Kkuljaem App Mobile Preview 6', image: '/6.png', alt: 'Kkuljaem mobile app preview 6' },
+      { title: 'Kkuljaem App Mobile Preview 7', image: '/7.png', alt: 'Kkuljaem mobile app preview 7' },
+      { title: 'Kkuljaem App Mobile Preview 8', image: '/8.png', alt: 'Kkuljaem mobile app preview 8' },
+      { title: 'Kkuljaem App Mobile Preview 9', image: '/9.png', alt: 'Kkuljaem mobile app preview 9' },
+    ],
+  },
 ];
 
 const projects: Project[] = [
@@ -98,6 +140,36 @@ const projects: Project[] = [
     href: 'https://kkuljaemkorean.com/',
     type: 'Website',
   },
+];
+
+const livePreviews: LivePreview[] = [
+  {
+    title: 'Kkuljaem Education',
+    url: 'https://www.kkuljaemeducation.com/',
+    description: 'Education-focused website for programs, services, and enrollment flow.',
+  },
+  {
+    title: 'Kkuljaem App Web',
+    url: 'https://kkuljaemapp.com/',
+    description: 'Web platform experience for the Kkuljaem learning ecosystem.',
+  },
+  {
+    title: 'Kkuljaem Korean',
+    url: 'https://kkuljaemkorean.com/',
+    description: 'Dedicated website for Korean language learning and offerings.',
+  },
+];
+
+const companyLogos: CompanyLogo[] = [
+  { name: 'BCA', image: '/bca.svg' },
+  { name: 'Telkomsel', image: '/telkomsel.png' },
+  { name: 'BNI', image: '/bni.png' },
+  { name: 'Indosat', image: '/indosat.png' },
+  { name: 'Grab', image: '/grab.png' },
+  { name: 'Manulife', image: '/manulife.png' },
+  { name: 'Phintraco', image: '/phintraco.png' },
+  { name: 'Kkuljaem', image: '/kkuljaem.png' },
+  { name: 'Good Doctor', image: '/gooddoctor.png' },
 ];
 
 const experiences: Experience[] = [
@@ -203,8 +275,6 @@ const impactItems = [
   },
 ];
 
-const supportedOrganizations = ['BCA', 'Telkomsel', 'BNI', 'Indosat', 'Grab', 'Manulife', 'Good Doctor', 'Phintraco Consulting', 'Kkuljaem Edujaya Indo'];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: {
@@ -261,6 +331,7 @@ function ThemeButton({ darkMode, onClick }: { darkMode: boolean; onClick: () => 
 export default function IvanPortfolioWebsite() {
   const [darkMode, setDarkMode] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeMobileProject, setActiveMobileProject] = useState('grab-health');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -285,14 +356,26 @@ export default function IvanPortfolioWebsite() {
     }
   }, [darkMode]);
 
-  const currentShowcase = useMemo(() => showcaseImages[currentSlide], [currentSlide]);
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [activeMobileProject]);
+
+  const activeShowcaseProject = useMemo(() => {
+    return mobileShowcaseProjects.find((project) => project.key === activeMobileProject) ?? mobileShowcaseProjects[0];
+  }, [activeMobileProject]);
+
+  const activeShowcaseImages = activeShowcaseProject.images;
+
+  const currentShowcase = useMemo(() => {
+    return activeShowcaseImages[currentSlide];
+  }, [activeShowcaseImages, currentSlide]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % showcaseImages.length);
+    setCurrentSlide((prev) => (prev + 1) % activeShowcaseImages.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? showcaseImages.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? activeShowcaseImages.length - 1 : prev - 1));
   };
 
   return (
@@ -560,28 +643,29 @@ export default function IvanPortfolioWebsite() {
                   );
                 })}
               </motion.div>
+            </section>
+          </Reveal>
 
-              <div className="rounded-[28px] border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-                <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="max-w-3xl">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700 dark:bg-orange-500/10 dark:text-orange-300">
-                      <Building2 size={14} />
-                      Organizations supported through project work
-                    </div>
-                    <p className="mt-3 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
-                      Contributed to projects supporting organizations such as BCA, Telkomsel, BNI, Indosat, Grab, and Manulife through product development, consulting, engineering delivery, and technical implementation work.
-                    </p>
-                  </div>
+          <Reveal>
+            <section className="space-y-8">
+              <SectionTitle
+                eyebrow="Companies I've Worked With"
+                title="Experience across startups, consulting, and enterprise-related projects"
+                description="A selection of organizations and brands I have supported through engineering, consulting, delivery, and product work."
+              />
 
-                  <div className="flex max-w-xl flex-wrap gap-2">
-                    {supportedOrganizations.map((org) => (
-                      <span key={org} className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-2 text-xs font-semibold text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200">
-                        {org}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <motion.div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4" variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.15 }}>
+                {companyLogos.map((company) => (
+                  <motion.div
+                    key={company.name}
+                    variants={fadeUp}
+                    className="group flex min-h-[120px] items-center justify-center rounded-[28px] border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+                    title={company.name}
+                  >
+                    <img src={company.image} alt={company.name} className="max-h-12 w-auto object-contain opacity-90 transition group-hover:opacity-100 dark:brightness-95 dark:contrast-125" />
+                  </motion.div>
+                ))}
+              </motion.div>
             </section>
           </Reveal>
 
@@ -618,14 +702,99 @@ export default function IvanPortfolioWebsite() {
 
           <Reveal>
             <section className="space-y-8">
-              <SectionTitle eyebrow="Showcase Carousel" title="Mobile project screenshots" description="Using your local images from the public folder. Click the arrows or dots to browse all 9 screenshots." />
+              <SectionTitle eyebrow="Live Product Showcase" title="Real products I have built" description="Live previews of selected public websites. If a browser blocks embedding, you can still open each site directly." />
+
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">Most of my projects are private client projects and cannot be shown publicly. Below are a few selected public projects that I can showcase.</p>
+
+              <motion.div className="grid gap-8 lg:grid-cols-3" variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.15 }}>
+                {livePreviews.map((site) => (
+                  <motion.div
+                    key={site.title}
+                    variants={fadeUp}
+                    className="overflow-hidden rounded-[32px] border border-neutral-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-900"
+                  >
+                    <div className="border-b border-neutral-200 px-5 py-4 dark:border-neutral-800">
+                      <div className="mb-3 flex items-center gap-2">
+                        <span className="h-3 w-3 rounded-full bg-red-400" />
+                        <span className="h-3 w-3 rounded-full bg-yellow-400" />
+                        <span className="h-3 w-3 rounded-full bg-green-400" />
+                      </div>
+
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3 className="text-lg font-semibold">{site.title}</h3>
+                          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">{site.description}</p>
+                        </div>
+
+                        <a
+                          href={site.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-neutral-300 px-3 py-2 text-xs font-semibold transition hover:-translate-y-0.5 dark:border-neutral-700"
+                        >
+                          <ExternalLink size={14} />
+                          Open Live
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="relative h-[420px] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                      <iframe src={site.url} title={site.title} className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/10 to-transparent p-4 dark:from-black/30">
+                        <div className="pointer-events-auto flex justify-end">
+                          <a
+                            href={site.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur transition hover:bg-white dark:bg-neutral-900/90 dark:text-white dark:hover:bg-neutral-900"
+                          >
+                            <Monitor size={14} />
+                            Open in New Tab
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </section>
+          </Reveal>
+
+          <Reveal>
+            <section className="space-y-8">
+              <SectionTitle eyebrow="Mobile Project Showcase" title="Selected mobile app work" description="These two are the public mobile projects that I can show" />
+
+              <div className="flex flex-wrap gap-3">
+                {mobileShowcaseProjects.map((project) => {
+                  const isActive = activeMobileProject === project.key;
+                  return (
+                    <button
+                      key={project.key}
+                      type="button"
+                      onClick={() => setActiveMobileProject(project.key)}
+                      className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                        isActive ? 'border-orange-500 bg-orange-500 text-white' : 'border-neutral-300 bg-white text-neutral-800 hover:-translate-y-0.5 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white'
+                      }`}
+                    >
+                      <Smartphone size={16} />
+                      {project.label}
+                    </button>
+                  );
+                })}
+              </div>
 
               <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
                 <div className="space-y-4">
                   <div className="rounded-[28px] border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">Current slide</p>
-                    <h3 className="mt-2 text-2xl font-semibold">{currentShowcase.title}</h3>
-                    <p className="mt-3 leading-7 text-neutral-600 dark:text-neutral-300">These screenshots are from my public projects.</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400">Selected project</p>
+                    <h3 className="mt-2 text-2xl font-semibold">{activeShowcaseProject.title}</h3>
+                    <p className="mt-3 leading-7 text-neutral-600 dark:text-neutral-300">{activeShowcaseProject.description}</p>
+
+                    <div className="mt-6 rounded-2xl bg-neutral-50 p-4 dark:bg-neutral-800/70">
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">Current slide</p>
+                      <p className="mt-2 text-base font-semibold">{currentShowcase.title}</p>
+                    </div>
 
                     <div className="mt-6 flex items-center gap-3">
                       <button onClick={prevSlide} type="button" className="rounded-2xl border border-neutral-300 p-3 transition hover:-translate-y-0.5 dark:border-neutral-700" aria-label="Previous slide">
@@ -637,7 +806,7 @@ export default function IvanPortfolioWebsite() {
                       </button>
 
                       <div className="ml-2 flex flex-wrap gap-2">
-                        {showcaseImages.map((_, index) => (
+                        {activeShowcaseImages.map((_, index) => (
                           <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
@@ -651,7 +820,7 @@ export default function IvanPortfolioWebsite() {
                   </div>
                 </div>
 
-                <motion.div key={currentShowcase.image} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28, ease: 'easeOut' }} className="flex justify-center">
+                <motion.div key={`${activeMobileProject}-${currentShowcase.image}`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28, ease: 'easeOut' }} className="flex justify-center">
                   <div className="rounded-[40px] border border-neutral-200 bg-white p-4 shadow-lg dark:border-neutral-800 dark:bg-neutral-900">
                     <div className="mx-auto w-[260px] overflow-hidden rounded-[32px] border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-800 sm:w-[320px]">
                       <img src={currentShowcase.image} alt={currentShowcase.alt} className="h-auto w-full object-cover" />
