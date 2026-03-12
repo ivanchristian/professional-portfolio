@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ivan Christian – Professional Portfolio
 
-## Getting Started
+This repository contains the source code for my professional developer portfolio.
 
-First, run the development server:
+The website showcases my experience, projects, technical skills, and provides a simple way for companies and teams to contact me for opportunities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The portfolio is built using **Next.js and Tailwind CSS** and is deployed on **Vercel**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Live site:  
+https://ivanchristian.vercel.app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# About Me
 
-## Learn More
+I am a **Full Stack Developer and Technical Lead** based in **Jakarta, Indonesia (UTC+7)** with experience building web applications, mobile apps, backend systems, and production infrastructure.
 
-To learn more about Next.js, take a look at the following resources:
+I have worked across:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Product development
+- Technical consulting
+- Startup engineering
+- Enterprise systems
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I enjoy building **practical, scalable software that teams can rely on.**
 
-## Deploy on Vercel
+I am currently open to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Remote roles
+- Part-time work
+- Contract engagements
+- International teams
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# Tech Stack
+
+This portfolio is built with:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide Icons
+- Vercel Deployment
+
+---
+
+# Features
+
+The website includes:
+
+- Light / Dark theme toggle
+- Project showcase
+- Mobile app screenshot carousel
+- Professional experience timeline
+- Skills overview
+- Resume download
+- Contact links (Email, GitHub, LinkedIn)
+- Responsive design for mobile and desktop
+
+---
+
+# Featured Projects
+
+Some of the projects highlighted in this portfolio include:
+
+### Kkuljaem App
+
+Language learning mobile application available on:
+
+iOS  
+https://apps.apple.com/id/app/kkuljaem/id1586145527
+
+Android  
+https://play.google.com/store/apps/dev?id=5625881168223483476
+
+### Kkuljaem Web Platform
+
+https://kkuljaemapp.com
+
+### Kkuljaem Education
+
+https://www.kkuljaemeducation.com
+
+### Kkuljaem Korean
+
+https://kkuljaemkorean.com
