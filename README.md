@@ -1,88 +1,172 @@
-# Ivan Christian – Professional Portfolio
+# Ivan Christian Portfolio
 
-This repository contains the source code for my professional developer portfolio.
+Personal portfolio website of **Ivan Christian** — Tech Lead, Full Stack Developer, and IT Consultant based in Jakarta, Indonesia.
 
-The website showcases my experience, projects, technical skills, and provides a simple way for companies and teams to contact me for opportunities.
+This site showcases professional experience, selected projects, technical skills, and availability for remote opportunities.
 
-The portfolio is built using **Next.js and Tailwind CSS** and is deployed on **Vercel**.
-
-Live site:  
+🌐 **Live Website**  
 https://ivanchristian.vercel.app
 
 ---
 
-# About Me
+# About
 
-I am a **Full Stack Developer and Technical Lead** based in **Jakarta, Indonesia (UTC+7)** with experience building web applications, mobile apps, backend systems, and production infrastructure.
+This portfolio highlights my work as a software engineer and technical lead across web, mobile, and backend systems.
 
-I have worked across:
+I focus on building **practical, scalable products** and delivering reliable software for real-world use.
 
-- Product development
-- Technical consulting
-- Startup engineering
-- Enterprise systems
+Experience includes work across:
 
-I enjoy building **practical, scalable software that teams can rely on.**
+- education technology
+- telecom platforms
+- financial services
+- enterprise internal systems
 
-I am currently open to:
+Through consulting and engineering roles I have contributed to projects supporting organizations such as:
 
-- Remote roles
-- Part-time work
-- Contract engagements
-- International teams
-
----
-
-# Tech Stack
-
-This portfolio is built with:
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Lucide Icons
-- Vercel Deployment
+**BCA • Telkomsel • BNI • Indosat • Grab • Manulife**
 
 ---
 
 # Features
 
-The website includes:
+The portfolio includes:
 
-- Light / Dark theme toggle
-- Project showcase
-- Mobile app screenshot carousel
-- Professional experience timeline
-- Skills overview
-- Resume download
-- Contact links (Email, GitHub, LinkedIn)
+- Professional introduction and availability
+- Work experience timeline
+- Selected projects with external links
+- Mobile product showcase carousel
+- Skills and technology stack
+- Impact and contribution highlights
+- Contact and collaboration section
+- Dark / light theme toggle
 - Responsive design for mobile and desktop
+- SEO metadata and Open Graph preview image
 
 ---
 
-# Featured Projects
+# Tech Stack
 
-Some of the projects highlighted in this portfolio include:
+This project is built using:
 
-### Kkuljaem App
+- **Next.js 14**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide Icons**
 
-Language learning mobile application available on:
+Deployment:
 
-iOS  
-https://apps.apple.com/id/app/kkuljaem/id1586145527
+- **Vercel**
 
-Android  
-https://play.google.com/store/apps/dev?id=5625881168223483476
+---
 
-### Kkuljaem Web Platform
+# Project Structure
 
-https://kkuljaemapp.com
+```
+app/
+  layout.tsx
+  page.tsx
+  globals.css
 
-### Kkuljaem Education
+public/
+  og-image.png
+  favicon.ico
+  Ivan_Christian_Resume_2026.pdf
+  screenshots/
+```
 
-https://www.kkuljaemeducation.com
+---
 
-### Kkuljaem Korean
+# Running Locally
 
-https://kkuljaemkorean.com
+Clone the repository:
+
+```
+git clone https://github.com/ivanchristian/portfolio
+```
+
+Navigate to the project:
+
+```
+cd portfolio
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run development server:
+
+```
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+# Build
+
+Create production build:
+
+```
+npm run build
+```
+
+Run production server:
+
+```
+npm run start
+```
+
+---
+
+# Deployment
+
+The site is deployed using **Vercel**.
+
+Every push to the `main` branch automatically triggers a new deployment.
+
+---
+
+# Open to Opportunities
+
+I am currently open to:
+
+- Remote full-time roles
+- Part-time engineering work
+- Contract / freelance projects
+- Technical consulting
+- International collaboration
+
+Timezone: **UTC+7 (Jakarta)**  
+Flexible overlap with **APAC, EU, and partial US hours**
+
+---
+
+# Contact
+
+📧 Email  
+ivan15christian@gmail.com
+
+🔗 LinkedIn  
+https://www.linkedin.com/in/ivanchristian15
+
+💻 GitHub  
+https://github.com/ivanchristian
+
+---
+
+# License
+
+This project is for personal portfolio use.
+
+Code may be used for inspiration or learning purposes.
