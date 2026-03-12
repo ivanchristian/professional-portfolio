@@ -1,2 +1,2 @@
 # professional-portfolio
-Modern Minimalist Professional Portfolio Website
+Modern Minimalist Professional Portfolio Website by Ivan Christian
